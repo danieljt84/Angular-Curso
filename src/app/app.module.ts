@@ -3,18 +3,22 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {PhotosModules} from './photos/photos.module'
 import { HttpClientModule } from '@angular/common/http';
+import { RoutingModules } from './app.routing.modules';
+import { ErrorsModules } from './error/not-found/errorsModules';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     PhotosModules,
-    HttpClientModule
-
+    HttpClientModule,
+    RoutingModules,
+    ErrorsModules
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
