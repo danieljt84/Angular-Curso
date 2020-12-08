@@ -1,24 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {PhotosModules} from './photos/photos.module'
-import { HttpClientModule } from '@angular/common/http';
-import { RoutingModules } from './app.routing.modules';
-import { ErrorsModules } from './error/not-found/errorsModules';
 
-
+import { PhotosModule } from './photos/photos.module';
+import { AppRoutingModule } from './app.routing.module';
+import { ErrorsModule } from './errors/errors.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    PhotosModules,
-    HttpClientModule,
-    RoutingModules,
-    ErrorsModules
-    
+    PhotosModule,
+    AppRoutingModule,
+    ErrorsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
